@@ -1,9 +1,17 @@
-= rudge
+# Rudge
 
-Description goes here.
+### Current status
+This document
 
-== Contributing to rudge
- 
+### Plan
+Build a tools that check ruby coding conventions
+
+### Why
+learn more about Ruby Ripper, lex-tokens and s-expressions. And of course
+clenaup my code :)
+
+## Contributing to Rudge
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
 * Fork the project.
@@ -12,8 +20,11 @@ Description goes here.
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
-== Copyright
+## For developers
 
-Copyright (c) 2013 Joel Larsson. See LICENSE.txt for
+Not ready yet.
+
+## Copyright
+
+Copyright (c) 2012 Joel Larsson. See LICENSE.txt for
 further details.
-
