@@ -1,0 +1,36 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    git (1.2.5)
+    jeweler (1.8.4)
+      bundler (~> 1.0)
+      git (>= 1.2.5)
+      rake
+      rdoc
+    json (1.7.6)
+    minitest (4.5.0)
+    rake (10.0.3)
+    rdoc (3.12)
+      json (~> 1.4)
+    reek (1.2.13)
+      ripper_ruby_parser (~> 0.0.7)
+      ruby2ruby (~> 1.2.5)
+      ruby_parser (~> 2.0)
+      sexp_processor (~> 3.0)
+    ripper_ruby_parser (0.0.8)
+      sexp_processor (~> 3.0)
+    ruby2ruby (1.2.5)
+      ruby_parser (~> 2.0)
+      sexp_processor (~> 3.0)
+    ruby_parser (2.3.1)
+      sexp_processor (~> 3.0)
+    sexp_processor (3.2.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler
+  jeweler (~> 1.8.4)
+  minitest
+  reek (~> 1.2.8)
