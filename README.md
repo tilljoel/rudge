@@ -4,7 +4,38 @@
 This document
 
 ### Plan
-Build a tools that check ruby coding conventions
+Build a tools that check Ruby coding conventions
+
+Using Ruby Ripper like this:
+
+```
+1.9.3 (main):0 > p Ripper.lex("a = 1+1")
+```
+```ruby
+[[[1, 0], :on_ident, "a"],
+ [[1, 1], :on_sp,    " "],
+ [[1, 2], :on_op,    "="],
+ [[1, 3], :on_sp,    " "],
+ [[1, 4], :on_int,   "1"],
+ [[1, 5], :on_op,    "+"],
+ [[1, 6], :on_int,   "1"]]
+```
+
+```
+1.9.3 (main):0 > p Ripper.lex("a = 1+1")
+```
+```ruby
+[:program,
+ [[:assign,
+  [:var_field,
+   [:@ident,
+   "a",
+   [1, 0]]],
+  [:binary,
+   [:@int, "1", [1, 4]],
+   :+,
+   [:@int, "1", [1, 6]]]]]]
+```
 
 Using Ruby Ripper like this:
 
@@ -38,8 +69,10 @@ Using Ruby Ripper like this:
 ```
 
 ### Why
-learn more about Ruby Ripper, lex-tokens and s-expressions. And of course
-clenaup my code :)
+Learn more about Ruby Ripper, lex-tokens and s-expressions. And of course
+cleanup my code :)
+
+##
 
 ##
 
