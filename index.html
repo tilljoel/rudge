@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Rudge by tilljoel</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Rudge</h1>
+          <h2>Ruby Judge - Check that your ruby source follows coding conventions</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/tilljoel/rudge/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/tilljoel/rudge/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/tilljoel/rudge" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>Rudge</h1>
+
+<h3>Current status</h3>
+
+<p>This document</p>
+
+<h3>Plan</h3>
+
+<p>Build a tools that check Ruby coding conventions</p>
+
+<p>Using Ruby Ripper like this:</p>
+
+<pre><code>1.9.3 (main):0 &gt; p Ripper.lex("a = 1+1")
+</code></pre>
+
+<div class="highlight"><pre><span class="o">[[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="ss">:on_ident</span><span class="p">,</span> <span class="s2">"a"</span><span class="o">]</span><span class="p">,</span>
+ <span class="o">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="ss">:on_sp</span><span class="p">,</span>    <span class="s2">" "</span><span class="o">]</span><span class="p">,</span>
+ <span class="o">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">]</span><span class="p">,</span> <span class="ss">:on_op</span><span class="p">,</span>    <span class="s2">"="</span><span class="o">]</span><span class="p">,</span>
+ <span class="o">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="o">]</span><span class="p">,</span> <span class="ss">:on_sp</span><span class="p">,</span>    <span class="s2">" "</span><span class="o">]</span><span class="p">,</span>
+ <span class="o">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="o">]</span><span class="p">,</span> <span class="ss">:on_int</span><span class="p">,</span>   <span class="s2">"1"</span><span class="o">]</span><span class="p">,</span>
+ <span class="o">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="o">]</span><span class="p">,</span> <span class="ss">:on_op</span><span class="p">,</span>    <span class="s2">"+"</span><span class="o">]</span><span class="p">,</span>
+ <span class="o">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="o">]</span><span class="p">,</span> <span class="ss">:on_int</span><span class="p">,</span>   <span class="s2">"1"</span><span class="o">]]</span>
+</pre></div>
+
+<pre><code>1.9.3 (main):0 &gt; p Ripper.lex("a = 1+1")
+</code></pre>
+
+<div class="highlight"><pre><span class="o">[</span><span class="ss">:program</span><span class="p">,</span>
+ <span class="o">[[</span><span class="ss">:assign</span><span class="p">,</span>
+  <span class="o">[</span><span class="ss">:var_field</span><span class="p">,</span>
+   <span class="o">[</span><span class="ss">:@ident</span><span class="p">,</span>
+   <span class="s2">"a"</span><span class="p">,</span>
+   <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="o">]]]</span><span class="p">,</span>
+  <span class="o">[</span><span class="ss">:binary</span><span class="p">,</span>
+   <span class="o">[</span><span class="ss">:@int</span><span class="p">,</span> <span class="s2">"1"</span><span class="p">,</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="o">]]</span><span class="p">,</span>
+   <span class="ss">:+</span><span class="p">,</span>
+   <span class="o">[</span><span class="ss">:@int</span><span class="p">,</span> <span class="s2">"1"</span><span class="p">,</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="o">]]]]]]</span>
+</pre></div>
+
+<h3>Why</h3>
+
+<p>Learn more about Ruby Ripper, lex-tokens and s-expressions. And of course
+cleanup my code :)</p>
+
+<h2>Contributing to Rudge</h2>
+
+<ul>
+<li>Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.</li>
+<li>Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.</li>
+<li>Fork the project.</li>
+<li>Start a feature/bugfix branch.</li>
+<li>Commit and push until you are happy with your contribution.</li>
+<li>Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.</li>
+<li>Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.</li>
+</ul><h2>For developers</h2>
+
+<p>Not ready yet.</p>
+
+<h2>Copyright</h2>
+
+<p>Copyright (c) 2012 Joel Larsson. See LICENSE.txt for
+further details.</p>
+        </section>
+
+        <footer>
+          Rudge is maintained by <a href="https://github.com/tilljoel">tilljoel</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
