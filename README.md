@@ -41,7 +41,27 @@ Using Ruby Ripper like this:
 Learn more about Ruby Ripper, lex-tokens and s-expressions. And of course
 cleanup my code :)
 
-##
+### Ideas
+
+* Integrate in CI, commit hooks or editor
+* Write nice wrapper around s-exp arrays
+
+## Rules
+* Space around some operators, no space around some
+* Space after comma
+* Prefer single-quoted strings when you don't need string interpolation
+* Use empty lines between defs.
+* Use two lines before class?
+* Use no newlines after "end"
+* Indent when as deep as case.
+
+## Warnings
+* "Sandi Metz rules"
+* Law of demeter
+* To much nesting
+* Rescue without exception
+* Find unused methods
+
 
 ##
 
