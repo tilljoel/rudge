@@ -4,7 +4,7 @@
 This document
 
 ### Plan
-Build a tools that check Ruby coding conventions
+Build a tool that check Ruby coding conventions
 
 Using Ruby Ripper like this:
 
