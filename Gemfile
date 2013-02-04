@@ -1,6 +1,10 @@
 source "http://rubygems.org"
 
+gem 'activesupport'
+gem 'activemodel'
+
 group :development, :test do
+  gem "mocha"
   gem "minitest", ">= 0"
   gem "minitest-reporters"
   gem "aruba"

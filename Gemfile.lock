@@ -1,12 +1,18 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    activemodel (3.2.11)
+      activesupport (= 3.2.11)
+      builder (~> 3.0.0)
+    activesupport (3.2.11)
+      i18n (~> 0.6)
+      multi_json (~> 1.0)
     ansi (1.4.3)
     aruba (0.5.1)
       childprocess (~> 0.3.6)
       cucumber (>= 1.1.1)
       rspec-expectations (>= 2.7.0)
-    builder (3.1.4)
+    builder (3.0.4)
     childprocess (0.3.7)
       ffi (~> 1.0, >= 1.0.6)
     coderay (1.0.8)
@@ -29,12 +35,14 @@ GEM
       json (>= 1.7.6)
     git (1.2.5)
     hashie (1.2.0)
+    i18n (0.6.1)
     jeweler (1.8.4)
       bundler (~> 1.0)
       git (>= 1.2.5)
       rake
       rdoc
     json (1.7.6)
+    metaclass (0.0.1)
     method_source (0.8.1)
     minitest (4.5.0)
     minitest-reporters (0.14.7)
@@ -42,6 +50,9 @@ GEM
       builder
       minitest (>= 2.12, < 5.0)
       powerbar
+    mocha (0.13.1)
+      metaclass (~> 0.0.1)
+    multi_json (1.5.0)
     powerbar (1.0.11)
       ansi (~> 1.4.0)
       hashie (>= 1.1.0)
@@ -76,11 +87,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activemodel
+  activesupport
   aruba
   bundler
   jeweler (~> 1.8.4)
   minitest
   minitest-reporters
+  mocha
   pry
   pry-debugger
   reek (~> 1.2.8)
