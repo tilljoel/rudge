@@ -1,0 +1,7 @@
+# Add signal handler for ctrl-c
+# Add celluloid for each file
+# Add progress bar
+# Run cucumber after tests if possible
+# Fix some tree structure for S-exp
+# Change up to something similar to rspec fire?
+# Check http://thingsaaronmade.com/blog/a-quick-intro-to-writing-a-parser-using-treetop.html
